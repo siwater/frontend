@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    msg = "Hello from the front end"
     url = "http://{server}:{port}/message".format(server=backend_server, port=backend_port)
     response = requests.get(url)
     data = response.json()
@@ -16,6 +15,7 @@ def index():
 
 
 @app.route('/test', methods=['GET'])
+def test():
     return "ok"
 
 def index():
