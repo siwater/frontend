@@ -14,6 +14,11 @@ def index():
     data = response.json()
     return render_template("index.html", title="Front End", message=data['message'])
 
+
+@app.route('/test', methods=['GET'])
+    return "ok"
+
+def index():
 if __name__ == "__main__":
     listen_port = os.environ.get('LISTEN_PORT')
     if listen_port == None:
