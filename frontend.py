@@ -18,7 +18,6 @@ def index():
 def test():
     return "ok"
 
-def index():
 if __name__ == "__main__":
     listen_port = os.environ.get('LISTEN_PORT')
     if listen_port == None:
